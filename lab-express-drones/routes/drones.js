@@ -39,19 +39,28 @@ router.post("/create", async (req, res, next) => {
   res.redirect("/drones");
 });
 
-router.get("/:id/edit", (req, res, next) => {
+router.get("/:id/edit", async (req, res, next) => {
   // Iteration #4: Update the drone
   // ... your code here
+  const { id } = req.params;
+  const drone = await Drone.findById(id);
+  res.render("drones/update-form", { drone });
 });
 
-router.post("/:id/edit", (req, res, next) => {
+router.post("/:id/edit", async (req, res, next) => {
   // Iteration #4: Update the drone
   // ... your code here
+  const { id } = req.params;
+  await Drone.findByIdAndUpdate(id, req.body);
+  res.redirect("/drones");
 });
 
-router.post("/:id/delete", (req, res, next) => {
+router.post("/:id/delete", async (req, res, next) => {
   // Iteration #5: Delete the drone
   // ... your code here
+  const { id } = req.params;
+  await Drone.findByIdAndDelete(id);
+  res.redirect("/drones");
 });
 
 module.exports = router;

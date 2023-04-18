@@ -1,8 +1,38 @@
 body {
   padding: 50px;
   font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  display: flex;
+}
+
+.vpwh {
+  width: 90vw;
+  height: auto;
+}
+
+.main {
+  background-color: #00b7ff;
 }
 
 a {
-  color: #00b7ff;
+  color: brown;
+  display: block;
+  background-color: #fdd226;
+}
+
+img {
+  width: 160px;
+  height: auto;
+}
+
+div {
+  width: 160px;
+  padding: 26px;
+  border: 2px solid gray;
+  flex-direction: row;
+
+}
+
+button {
+  margin: 16px;
+  padding: 6px;
 }
