@@ -1,0 +1,18 @@
+<div class="main"><h2>Available vehicles</h2>
+  <a href="/vehicles">See our vehicles</a>
+  <br />
+  <a href="/vehicles/create">Create a new vehicle</a>
+</div>
+{{#each vehicles}}
+  <div>
+    <h5>{{name}}</h5>
+    <a href="/vehicles/{{_id}}">See details</a>
+    <br />
+    <a href="/vehicles/{{_id}}/edit">Edit details</a>
+    <form action="/vehicles/{{_id}}/delete" method="post"><button
+        type="submit"
+      >Delete it!</button></form>
+
+  </div>
+
+{{/each}}

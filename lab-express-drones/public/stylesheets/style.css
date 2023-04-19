@@ -9,6 +9,10 @@ body {
   height: auto;
 }
 
+label {
+  display: block;
+}
+
 .main {
   background-color: #00b7ff;
 }
@@ -28,11 +32,14 @@ div {
   width: 160px;
   padding: 26px;
   border: 2px solid gray;
-  flex-direction: row;
 
 }
 
 button {
   margin: 16px;
   padding: 6px;
+}
+
+h2 {
+  margin-right: 60px;
 }
